@@ -1,10 +1,14 @@
 #!/usr/bin/env python
 # author: dfosborne2
+# Free for any kind of use. No warranty of any sory implied or to be assumed.
 # For use with BIND DNS. Most DNS libraries make the assumption
 # that you will not make more than 100 changes to a zone
-# on any given day. This has shortcomings should use the datestamp
-# serial:  2015021099  (yyyymmddrn - 2015 Feb 10 revion 99)
-# This script will bump the serial number to the next day of the given month.
+# on any given day. These methods have shortcomings in the datestamp
+# serial method:
+# 2015021099  (yyyymmddrn - 2015 Feb 10 revion 99)
+# This script will bump the serial number to the next day of the given month, 
+# should revision 101 be needed for the day.
+# Prerequites: dnspython
 
 import dns.zone
 from time import strftime
