@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 # author: dfosborne2
-# Free for any kind of use. No warranty of any sory implied or to be assumed.
 # For use with BIND DNS. Most DNS libraries make the assumption
 # that you will not make more than 100 changes to a zone
 # on any given day. These methods have shortcomings in the datestamp
@@ -20,7 +19,8 @@ zfile = sys.argv[1]
 
 def updateSerial(zfile):
 
-    """Supply /path/to/zonfile as your zfile object"""
+    """Supply /path/to/zonfile as your zfile object
+    Manipulate a datestamped serial:  yyyymmddrn (2015021099)"""
 
     zname = zfile.split('/')[1]
     zone = dns.zone.from_file(zfile,zname)
