@@ -14,7 +14,6 @@ from time import strftime
 from calendar import monthrange
 import sys
 serial_base = strftime('%Y%m%d')
-zfile = sys.argv[1]
 
 
 def updateSerial(zfile):
@@ -53,5 +52,6 @@ def updateSerial(zfile):
 
 
 if __name__ == "__main__":
-
+    
+    zfile = sys.argv[1]
     print updateSerial(zfile) 
